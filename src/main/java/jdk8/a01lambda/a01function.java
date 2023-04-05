@@ -13,6 +13,6 @@ public class a01function {
         List<String> list = Arrays.asList("hello", "world", "hello world");
         list.stream().map(item -> item.toUpperCase()).forEach(System.out::println);
         list.stream().map(String::toUpperCase).forEach(System.out::println);
-        System.out.println("");
+        System.out.println(" ");
     }
 }
