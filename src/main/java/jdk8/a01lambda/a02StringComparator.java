@@ -24,7 +24,5 @@ public class a02StringComparator {
         Collections.sort(names, (String o1, String o2) -> o2.compareTo(o1));
         Collections.sort(names, Comparator.reverseOrder());
 
-    });
-
 }
 }
