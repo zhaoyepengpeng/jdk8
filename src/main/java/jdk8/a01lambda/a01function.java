@@ -2,6 +2,8 @@ package jdk8.a01lambda;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
+
 /**
  * a01function class
  *
@@ -14,5 +16,7 @@ public class a01function {
         list.stream().map(item -> item.toUpperCase()).forEach(System.out::println);
         list.stream().map(String::toUpperCase).forEach(System.out::println);
         System.out.println(" ");
+        Function<String,String> function = String::toUpperCase;
+        System.out.println(function.getClass().getInterfaces()[0]);
     }
 }
