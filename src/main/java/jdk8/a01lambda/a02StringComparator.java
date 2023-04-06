@@ -20,6 +20,11 @@ public class a02StringComparator {
             }
         });
         System.out.println(names.toString());
+        //此行代码可以被下一行代替
+        Collections.sort(names, (String o1, String o2) -> o2.compareTo(o1));
+        Collections.sort(names, Comparator.reverseOrder());
 
-    }
+    });
+
+}
 }
