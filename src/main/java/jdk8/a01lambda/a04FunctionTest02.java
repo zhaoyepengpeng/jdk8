@@ -22,6 +22,7 @@ public class a04FunctionTest02 {
         System.out.println(a04FunctionTest02.compute3(1, 2, (value1, value2) -> value1 / value2));
 
 
+
     }
 
     public int compute(int a, Function<Integer, Integer> function1, Function<Integer, Integer> function2) {
