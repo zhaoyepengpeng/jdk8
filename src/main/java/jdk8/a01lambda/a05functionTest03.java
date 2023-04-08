@@ -24,8 +24,6 @@ public class a05functionTest03 {
         a05functionTest03.getPersonByAge2(28, persons, (age, personList) -> {
             return personList.stream().filter(person -> person.getAge()>age).collect(Collectors.toList());
         }).forEach(person -> System.out.println(person.getUsername()+"===="+person.getAge()));
-
-
     }
 
     public List<Person> getPersonByUsername(String username, List<Person> persons) {
