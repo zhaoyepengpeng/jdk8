@@ -20,7 +20,11 @@ public class a05functionTest03 {
         a05functionTest03 a05functionTest03 = new a05functionTest03();
         List<Person> personResult = a05functionTest03.getPersonByUsername("zhangsan", persons);
         personResult.forEach(person -> System.out.println("getPersonByUsername:" + person.getUsername()));
-        a05functionTest03.getPersonByAge(25, persons).forEach(person -> System.out.println("getPersonByAge:" + person.getUsername() + "-----" + person.getAge()+ "-----" ));
+        a05functionTest03.getPersonByAge(25, persons).forEach(person -> System.out.println("getPersonByAge:" + person.getUsername() + "-----" + person.getAge() + "-----"));
+        a05functionTest03.getPersonByAge2(28, persons, (age, personList) -> {
+            return personList.stream().filter(person -> person.getAge()>age).collect(Collectors.toList());
+        }).forEach(person -> System.out.println(person.getUsername()+"===="+person.getAge()));
+
 
     }
 
@@ -32,6 +36,10 @@ public class a05functionTest03 {
         BiFunction<Integer, List<Person>, List<Person>> biFunction = (agePerson, personList) -> {
             return personList.stream().filter(person -> person.getAge() > agePerson).collect(Collectors.toList());
         };
+        return biFunction.apply(age, persons);
+    }
+
+    public List<Person> getPersonByAge2(int age, List<Person> persons, BiFunction<Integer, List<Person>, List<Person>> biFunction) {
         return biFunction.apply(age, persons);
     }
 }
