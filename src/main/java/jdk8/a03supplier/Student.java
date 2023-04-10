@@ -11,9 +11,7 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 public class Student {
     private String name = "zhangsan";
-<<<<<<< HEAD
     private int age = 20;
-=======
     private int score = 20;
 
     /**
@@ -30,5 +28,4 @@ public class Student {
         return student1.getName().compareToIgnoreCase(student2.getName());
     }
 
->>>>>>> dev
 }
