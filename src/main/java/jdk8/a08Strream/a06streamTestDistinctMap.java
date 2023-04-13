@@ -1,11 +1,13 @@
 package jdk8.a08Strream;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 public class a06streamTestDistinctMap {
+    static Map<String, String> map = new HashMap<>();
     public static void main(String[] args) {
         Student student1 = new Student("zhangsan", 90, "beijing", "1");
         Student student2 = new Student("lisi", 52, "shanghai", "2");
@@ -22,6 +24,13 @@ public class a06streamTestDistinctMap {
         //取出两个字段组合成map，并去重 students.stream().sorted(Comparator.comparing(Student::getId)).collec
         Map<String, String> collectMap = students.stream().collect(Collectors.toMap(Student::getId, Student::getName, (oldData, newData) -> newData));
         System.out.println(collectMap);
+
+        map.put("name","zhangsan");
+        map.put("name","zhangsan");
+        map.put("name","zhangsan");
+        map.put("name","zhangsan");
+        System.out.println(map);
+
 
 
 
