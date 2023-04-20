@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
  * @author: zhaoyepeng
  * @date: 2023-04-20 09:24:46
  * https://blog.csdn.net/weixin_36462703/article/details/114208224
+ * StringTokenizer since JDK 1.0
  * 功效:将字符串以定界符为界，分析为一个个的token(可理解为单词)，定界符可以自己指定。
  * <p>
  * 构造函数。
